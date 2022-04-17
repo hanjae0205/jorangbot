@@ -76,6 +76,9 @@ async def on_message(message):
             embed.add_field(name="아이디", value=user.id, inline=True)
             embed.set_footer(text="코드 출처: 제이크#2214 & 수많은 스택오버플로와 이름 모를 블로그")
             await message.channel.send(embed=embed)
+        elif message.content == "조랭봇 핑":
+            await message.channel.send(f"퐁! {round(client.latency * 1000)}ms")
+
         else:
             try:
                 await message.channel.send(engdap[message.content])
