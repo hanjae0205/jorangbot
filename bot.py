@@ -85,5 +85,7 @@ async def on_message(message):
         await message.channel.send("부르셨나요?")
     elif "<@959440643611058266>" in message.content:
         await message.channel.send("누가 이 조랭봇님을 멘션했어?\nhttps://tenor.com/view/smirk-don-lee-ma-dong-seok-gif-23962224")
+    elif message.content == "조랭봇 핑":
+        await message.channel.send(f"퐁! {round(client.latency * 1000)}ms")
 
 client.run(os.environ['token'])
